@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  section
+    h2 Create a new message
+    form(method='POST', action='/new')
+      div
+        label(style='display:block') Name
+        input(name='name')
+      br
+      div
+        label(style='display:block') Message
+        textarea(name='message')
+      br
+      button Submit
